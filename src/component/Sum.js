@@ -5,7 +5,7 @@ class Sum extends Component {
     state = {
         num1: "1",
         num2: "2",
-        result: "3"
+        result: ""
     }
     handleNum1(e) {
         const num1 = e.target.value;
@@ -52,7 +52,7 @@ class Sum extends Component {
                     <input onChange={this.handleNum2.bind(this)} value={this.state.num2}></input>
                     <button onClick={this.handleClick.bind(this)}>Sum</button>
                     <div>
-                        {this.state.re}
+                        {this.state.result}
                     </div>
                 </div>
             </div >
