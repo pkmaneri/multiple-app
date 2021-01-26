@@ -14,9 +14,7 @@ class Sum extends Component {
                 num1: num1,
                 num2: prevState.num2,
                 result: prevState.result
-
             }
-
         })
 
     }
