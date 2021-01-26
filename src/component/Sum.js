@@ -54,7 +54,6 @@ class Sum extends Component {
                     </div>
                 </div>
             </div >
-
         )
     }
 }

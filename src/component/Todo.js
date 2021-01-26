@@ -32,7 +32,14 @@ class Todo extends Component {
                 <div>
                     <input onChange={this.handleTodoItem.bind(this)} value={this.state.todoItem}></input>
                     <button onClick={this.handleClick.bind(this)}>AddItem</button>
-                    <div>{this.state.items}</div>
+                    <ul>
+                        {this.state.items.map((todoItem, i) => {
+                            return (
+                                <li key={i}>{todoItem}</li>
+                            )
+                        })
+                        }
+                    </ul>
                 </div>
             </div>
         )
