@@ -15,7 +15,6 @@ class Todo extends Component {
                 items: prevState.items,
             }
         })
-
     }
     handleClick() {
         const items = this.state.todoItem
