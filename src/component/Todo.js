@@ -5,6 +5,7 @@ class Todo extends Component {
 
         items: [],
         todoItem: "",
+        remove: ""
 
     }
     handleTodoItem(e) {
@@ -13,6 +14,7 @@ class Todo extends Component {
             return {
                 todoItem: todoItem,
                 items: prevState.items,
+                remove: prevState.r
             }
         })
     }
@@ -24,6 +26,17 @@ class Todo extends Component {
         })
         console.log(items)
     }
+   
+    handleRemove(i) {
+        let items = [...this.state.items];
+        items.splice(i, 1)
+        this.setState({
+            items: items
+
+        })
+    };
+
+
     render() {
         return (
             <div>
@@ -31,10 +44,14 @@ class Todo extends Component {
                 <div>
                     <input onChange={this.handleTodoItem.bind(this)} value={this.state.todoItem}></input>
                     <button onClick={this.handleClick.bind(this)}>AddItem</button>
+
                     <ul>
                         {this.state.items.map((todoItem, i) => {
                             return (
-                                <li key={i}>{todoItem}</li>
+
+                                <li key={i}>{todoItem}
+                                    <button onClick={this.handleRemove.bind(this, i)}>x</button>
+                                </li>
                             )
                         })
                         }
