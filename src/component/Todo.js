@@ -5,7 +5,6 @@ class Todo extends Component {
 
         items: [],
         todoItem: "",
-        remove: ""
 
     }
     handleTodoItem(e) {
@@ -14,7 +13,6 @@ class Todo extends Component {
             return {
                 todoItem: todoItem,
                 items: prevState.items,
-                remove: prevState.r
             }
         })
     }
